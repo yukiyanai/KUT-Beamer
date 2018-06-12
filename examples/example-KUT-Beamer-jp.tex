@@ -1,0 +1,175 @@
+\documentclass[dvipdfmx]{beamer}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+
+%% 日本語設定
+\usepackage[deluxe,expert]{otf}
+\renewcommand{\kanjifamilydefault}{mg}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+
+
+
+
+\usetheme[jp,simplefoot]{KUT}
+
+\title[KUT-Beamer]{高知工科大学非公式 Beamer テーマ}
+\subtitle{KUTスタイルの {\LaTeX} プレゼンテーション}
+\author{矢内 勇生}
+\institute[KUT]{経済・マネジメント学群}
+\date{2018年6月20日}
+
+\begin{document}
+
+\begin{frame}
+ \maketitle
+ %% Uncomment the following to remove header and footer from title page
+ %\thispagestyle{empty}
+\end{frame}
+
+\begin{frame}{内容} 
+  \tableofcontents
+\end{frame}
+
+\section{はじめに}
+\subsection{高知工科大学用 Beamer テーマ}
+
+\begin{frame}{KUT-Beamer を使ってみよう!}
+ \begin{itemize}
+  \item KUT の\alert{非公式} Beamer テーマ
+  \item 高知工科大学のスクールカラーを利用
+  \begin{itemize}
+   \item \textcolor{kutgreen}{KUT Green}: PANTONE 370C (RGB: 89, 150, 35)
+   \item \textcolor{kutblue}{KUT Blue}: PANTONE 286C (RGB: 0, 59, 148) 
+  \end{itemize}
+  \item 白黒中心のテーマ（tosayamada 土佐山田）も利用可能
+ \end{itemize}
+\end{frame}
+
+
+
+\section{基本}
+
+
+\subsection{ブロック}
+
+\begin{frame}{ブロックを使おう}
+  \begin{block}{Block}
+   これは block 環境です。
+  \end{block}
+  \pause
+  \begin{exampleblock}{Example}
+   これは example block 環境です。 
+  \end{exampleblock}
+ \pause
+  \begin{alertblock}{Alert}
+   これは alert block 環境です。
+  \end{alertblock}
+\end{frame}
+
+
+\subsection{数式}
+
+\begin{frame}{数式を使おう}
+ 正規分布 $\mathrm{N}(\mu, \sigma^2)$ の確率密度関数: 
+ \begin{equation}
+  f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}}\exp\left[-\frac{(x - \mu)^2}{2 \sigma^2} \right].
+ \end{equation}  
+
+\begin{block}{標準正規分布の確率密度関数}
+  \begin{equation}
+   f(x) = \frac{1}{\sqrt{2 \pi}}\exp\left(-\frac{x^2}{2}\right).
+  \end{equation}
+\end{block}
+ \end{frame}
+
+
+\section{図表}
+
+\subsection{表} 
+ 
+\begin{frame}{表で説明する}
+  \begin{table}
+   \vspace{-18pt}
+   \caption{OLSによる推定結果：結果変数は得票率 (\%)}
+    \begin{tabular}{lD{.}{.}{-2}D{.}{.}{-2}}
+     \hline
+                           & \multicolumn{2}{c}{推定値}\\
+     説明変数 & \multicolumn{1}{c}{モデル1} &
+     \multicolumn{1}{c}{モデル2} \\
+     \hline
+     定数   & 7.91 & -2.07\\
+                & (0.69) & (0.72)\\
+     議員経験 & 18.10  & 45.91\\
+                & (1.23) & (1.58)\\
+     選挙費用    & 1.85   & 4.87\\
+                & (0.12) & (0.16)\\
+     議員経験 $\times$ 選挙費用 &  & -4.76\\
+                                 &  & (0.21)\\ 
+     \hline
+     サンプルサイズ（$n$） & \multicolumn{1}{c}{1124} & \multicolumn{1}{c}{1124}\\
+     自由度調整済み $R^2$ & 0.56 & 0.70\\
+     \hline 
+     \multicolumn{3}{l}{\footnotesize 注：括弧内は標準誤差}\\
+    \end{tabular}
+  \end{table}
+
+\end{frame}
+
+\subsection{図}
+
+{
+\setbeamertemplate{footline}{}
+\frame{{図で説明する}
+ \begin{figure}[h]
+   \centering
+   \includegraphics[scale=.9]{normal-density.pdf}
+   \vspace{-12pt}
+   \caption{正規分布のPDF}
+ \end{figure}
+}}
+
+
+\begin{frame}{写真}
+  \begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+     \centering
+     \includegraphics[scale=.4]{figs/bayes.jpg}\\
+     Thomas Bayes
+   \end{column}
+    \begin{column}{0.5\textwidth}
+     \centering
+     \includegraphics[scale=.7]{figs/laplace.jpg}\\
+     Pierre-Simon Laplace
+   \end{column}
+ \end{columns}
+ \vspace{12pt}
+ \[
+  p(\theta | y) = \frac{p(y | \theta)p(\theta)}{p(y)}
+ \]
+\end{frame}
+
+
+\section{まとめ}
+\subsection{Let's use KUT-Beamer!}
+
+\begin{frame}{結論}
+ \LaTeX と KUT-Beamer を使えば
+ \begin{itemize}
+  \item 美しいスライドが作れる！
+  \item \alert{高知工科大学} のイメージを発信できる！
+ \end{itemize}
+ \pause
+ \vspace{36pt}
+ 
+ \hspace{2em} Email:
+ \href{mailto:yanai.yuki@kochi-tech.ac.jp}{\texttt{yanai.yuki@kochi-tech.ac.jp}}
+ \end{frame}
+
+\end{document}

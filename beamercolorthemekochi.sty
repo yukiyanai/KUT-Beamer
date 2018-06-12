@@ -1,0 +1,56 @@
+% KUT Kochi Beamer Color Theme, ver. 0.01 (2018-06-12)
+% Copyright 2018 by Yuki Yanai <yanai.yuki@kochi-tech.ac.jp>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\ProvidesPackage{beamercolorthemekochi}[06/12/2018]
+
+\mode<presentation>
+
+
+\definecolor{kutgreen}{RGB}{89, 150, 35}  % PANTONE 370C
+\definecolor{kutblue}{RGB}{0, 59, 148}    % PANTONE 286C
+\definecolor{kutgray}{RGB}{77, 77, 77}    % K70 (Dark gray)
+
+\definecolor{myred}{RGB}{196, 0, 0}  % for alert
+
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=myred}
+\setbeamercolor*{example text}{fg=kutblue}
+\setbeamercolor*{structure}{fg=kutblue,bg=white}
+
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\setbeamercolor*{palette primary}{fg=white,bg=kutgreen}
+\setbeamercolor*{palette secondary}{fg=kutgreen,bg=white}
+\setbeamercolor*{palette tertiary}{fg=kutblue,bg=white}
+\setbeamercolor*{palette quaternary}{fg=kutgray,bg=white}
+
+\setbeamercolor{titlelike}{fg=white, bg=kutgreen}
+\setbeamercolor{frametitle}{fg=kutgreen, bg=white}
+\setbeamercolor{frametitle right}{fg=kutgray, bg=white}
+
+\setbeamercolor{sidebar}{bg=kutgreen}
+
+\setbeamercolor*{palette sidebar primary}{fg=black}
+\setbeamercolor*{palette sidebar secondary}{fg=black}
+\setbeamercolor*{palette sidebar tertiary}{fg=black}
+\setbeamercolor*{palette sidebar quaternary}{fg=black}
+
+\setbeamercolor*{item projected}{fg=black,bg=black!20}
+
+\setbeamercolor{block title}{fg=white,bg=kutgreen}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=myred}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=kutblue}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!15!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!15!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!15!bg}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>
